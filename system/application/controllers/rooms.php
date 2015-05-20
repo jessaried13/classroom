@@ -164,7 +164,7 @@ class Rooms extends Controller {
 	
 	function roomhistory() {
 		
-		$layout['title'] = 'Room History';
+		$layout['title'] = 'Room Reservation History';
 		$layout['showtitle'] = $layout['title'];
 			
 		$body['bookings'] = $this->M_rooms->GetHistoryAll();

@@ -21,6 +21,7 @@ echo $this->session->flashdata('saved');
 						<th>Room Name</th>
 						<th>Room Type</th>
 						<th>Booked By</th>
+                                                <th>User Type </th>
 						<th>Date</th>
 						<th>Use Time</th>
 						<th>Notes</th>
@@ -44,7 +45,8 @@ echo $this->session->flashdata('saved');
 						<td><?php echo $rooms[$booking->room_id - 1]->name ?></td>
 						<td><?php echo $types[$booking->room_id - 1]->name ?></td>
                                                 <td><?php echo $users[$booking->user_id - 1]->lastname ?>, <?php echo $users[$booking->user_id - 1]->firstname ?> </td>
-						<!--<td><?php echo $users[$booking->user_id - 1]->displayname ?></td>!-->
+						<td><?php if($users[$booking->user_id - 1]->authlevel == 2) echo "Student"; else echo "Teacher"; ?>
+                                             <!--<td><?php echo $users[$booking->user_id - 1]->displayname ?></td>!-->
 						<td>
 						<?php if ($booking->date == NULL) : ?>
 							<?php echo 'Admin Booking' ?>
@@ -98,6 +100,7 @@ echo $this->session->flashdata('saved');
 						<th>Item Name</th>
 						<th>Serial Number</th>
 						<th>Reserved By</th>
+                                                <th>User Type </th>
 						<th>Date</th>
 						<th>Use Time</th>
 						<th>Notes</th>
@@ -121,7 +124,8 @@ echo $this->session->flashdata('saved');
 						<td><?php echo $item_groups[$reservation->item_id - 1]->name ?> - <?php echo $item_groups[$reservation->item_id - 1]->name ?><?php echo $items[$reservation->item_id - 1]->location ?></td>
 						<td><?php echo $items[$reservation->item_id - 1]->equipment_id ?></td>
                                                 <td><?php echo $users[$booking->user_id - 1]->lastname ?>, <?php echo $users[$booking->user_id - 1]->firstname ?> </td>
-						<!--<td><?php echo $users[$reservation->user_id - 1]->displayname ?></td>!-->
+						<td><?php if($users[$booking->user_id - 1]->authlevel == 2) echo "Student"; else echo "Teacher"; ?>
+                                                <!--<td><?php echo $users[$reservation->user_id - 1]->displayname ?></td>!-->
 						<td>
 						<?php if ($reservation->date == NULL) : ?>
 							<?php echo 'Admin Reservation' ?>

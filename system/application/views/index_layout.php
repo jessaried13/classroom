@@ -5,7 +5,7 @@
 <!-- BEGIN HEAD -->
 <head>
    <meta charset="utf-8" />
-   <title>Test Room Bookings | <?php echo ($title) ?></title>
+   <title> Department Of Computer Science || <?php echo ($title) ?></title>
    <base href="<?php echo $this->config->config['base_url'] ?>" />
    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
    <meta content="" name="description" />
@@ -22,6 +22,11 @@
     <!-- data tables!-->
      <link rel="stylesheet" type="text/css" href="webroot/assets/datatables/jquery.dataTables.css">
      <link rel="stylesheet" type="text/css" href="webroot/assets/datatables/dataTables.tableTools.css">
+     
+     
+   
+     
+     
      
     
    
@@ -394,6 +399,7 @@
    <script type="text/javascript" src="webroot/assets/jquery-slimscroll/jquery.slimscroll.min.js"></script>
    <script src="webroot/assets/bootstrap/js/bootstrap.min.js"></script>
    <script type="text/javascript" src="webroot/assets/chosen-bootstrap/chosen/chosen.jquery.min.js"></script>
+   
    <script type="text/javascript" src="webroot/assets/datatables/jquery.dataTables.js"></script>
    <script type="text/javascript" src="webroot/assets/datatables/dataTables.tableTools.js"></script>
    <script type="text/javascript" src="webroot/assets/datatables/dataTables.tableTools.min.js"></script>
@@ -422,7 +428,7 @@ $(document).ready(function(){
 
 
 
-$(document).ready(function() {
+/*$(document).ready(function() {
     $('#jsst-items').DataTable( {
         dom: 'T<"clear">lfrtip',
         tableTools: {
@@ -430,7 +436,7 @@ $(document).ready(function() {
         }
     } );
 } );
-
+     
 $(document).ready(function() {
     $('#historydt').DataTable( {
         dom: 'T<"clear">lfrtip',
@@ -447,7 +453,76 @@ $(document).ready(function() {
             "sSwfPath": "<?php echo base_url(); ?>webroot/assets/js/swf/copy_csv_xls_pdf.swf"
         }
     } );
-} );
+} ); */
+
+$(document).ready(function() {
+    $('#jsst-items').DataTable( {
+        dom: 'T<"clear">lfrtip',
+        tableTools: {
+            "aButtons": [
+                {
+                    "oSelectorOpts": { filter: 'applied', order: 'current' },
+                    "sExtends": "pdf",
+                    "sPdfOrientation": "landscape",
+                    "mColumns": [1,2,3,4],
+                }, 
+                {   
+                    "sExtends": "print",
+                    "sPdfOrientation": "landscape",
+                    "mColumns": [1,2,3,4],
+                }
+            ],
+            "sSwfPath": "<?php echo base_url(); ?>webroot/assets/js/swf/copy_csv_xls_pdf.swf"
+        }
+    } );
+} ); 
+
+$(document).ready(function() {
+    $('#ihistorydt').DataTable( {
+        dom: 'T<"clear">lfrtip',
+        tableTools: {
+            "aButtons": [
+                {
+                    "oSelectorOpts": { filter: 'applied', order: 'current' },
+                    "sExtends": "pdf",
+                    "sPdfOrientation": "landscape",
+                    "mColumns": [0,1,2,3,4,5,6],
+                },
+                {   
+                    "sExtends": "print",
+                    "sPdfOrientation": "landscape",
+                    "mColumns": [0,1,2,3,4,5,6],
+                }
+                
+            ],
+            "sSwfPath": "<?php echo base_url(); ?>webroot/assets/js/swf/copy_csv_xls_pdf.swf"
+        }
+    } );
+} ); 
+
+$(document).ready(function() {
+    $('#historydt').DataTable( {
+        dom: 'T<"clear">lfrtip',
+        tableTools: {
+            "aButtons": [
+                
+                {   
+                    "oSelectorOpts": { filter: 'applied', order: 'current' },
+                    "sExtends": "pdf",
+                    "sPdfOrientation": "landscape",
+                    "mColumns": [0,1,2,3,4,5,6],
+                },
+                {   
+                    "sExtends": "print",
+                    "sPdfOrientation": "landscape",
+                    "mColumns": [0,1,2,3,4,5,6],
+                },
+                
+            ],
+            "sSwfPath": "<?php echo base_url(); ?>webroot/assets/js/swf/copy_csv_xls_pdf.swf"
+        }
+    } );
+} ); 
 
 
 

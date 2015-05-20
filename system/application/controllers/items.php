@@ -78,7 +78,7 @@ class Items extends Controller {
 		$body['item_type'] = $this->M_items->GetItemType(NULL);
 		$body['item_group'] = $this->M_items->GetItemGroup(NULL);
 		// Set main layout
-		$layout['title'] = 'Items';
+		$layout['title'] = 'list of Equipments';
 		$layout['showtitle'] = $layout['title'];
 		$layout['body'] = $this->load->view('items/items_index', $body, True);
 		$this->load->view('index_layout', $layout );
@@ -167,7 +167,7 @@ class Items extends Controller {
 
 	function itemhistory() {
 		
-		$layout['title'] = 'Item History';
+		$layout['title'] = 'Item Reservation History';
 		$layout['showtitle'] = $layout['title'];
 			
 		$body['reservations'] = $this->M_reservations->GetAll();

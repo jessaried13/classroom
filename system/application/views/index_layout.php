@@ -17,6 +17,8 @@
    <link href="webroot/css/style.css" rel="stylesheet" />
    <link href="webroot/css/style-responsive.css" rel="stylesheet" />
    <link href="webroot/css/style-default.css" rel="stylesheet" id="style_color" />
+   <link rel="icon" type="image/png" href="webroot/img/favicon.png" sizes="16x16">
+   <link rel="icon" type="image/png" href="webroot/img/favicon.png" sizes="32x32">
    <link rel="stylesheet" type="text/css" href="webroot/assets/chosen-bootstrap/chosen/chosen.css">
    
     <!-- data tables!-->

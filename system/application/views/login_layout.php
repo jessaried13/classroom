@@ -8,7 +8,9 @@
 		<meta content="" name="description" />
 		<meta content="" name="author" />
 		<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>webroot/login/style.css" />
-		<script src="<?php echo base_url() ?>webroot/js/modernizr.custom.63321.js"></script>
+		<link rel="icon" type="image/png" href="webroot/img/favicon.png" sizes="16x16">
+                <link rel="icon" type="image/png" href="webroot/img/favicon.png" sizes="32x32">
+                <script src="<?php echo base_url() ?>webroot/js/modernizr.custom.63321.js"></script>
 
 		<!--[if lte IE 7]><style>.main{display:none;} .support-note .note-ie{display:block;}</style><![endif]-->
 		
